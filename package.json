@@ -12,9 +12,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@babel/preset-env": "^7.9.5",
     "express": "^4.17.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }
-  
 }

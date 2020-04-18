@@ -5,12 +5,17 @@ const mockAPIResponse = require('./mockAPI.js')
 const app = express()
 
 app.use(express.static('src/client'))
+app.use(express.static('dist'))
 
 console.log(__dirname)
 
 app.get('/', function (req, res) {
     res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
 })
+
+app.get('/dist/main.js', function(req, res) {
+    res.sendFile(__dirname + '/dist/main.js');
+});
 
 // designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
