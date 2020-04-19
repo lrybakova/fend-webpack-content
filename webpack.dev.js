@@ -7,7 +7,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: 'development',
   entry: './src/client/index.js',
+  devServer: {
+    writeToDisk: true,
+  },
   output: {
+    libraryTarget: 'var',
+    library: 'Client',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
