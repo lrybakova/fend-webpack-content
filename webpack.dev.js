@@ -10,6 +10,7 @@ module.exports = {
   devServer: {
     writeToDisk: true,
   },
+  devtool: 'inline-source-map',
   output: {
     libraryTarget: 'var',
     library: 'Client',
